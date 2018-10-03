@@ -14,7 +14,7 @@ $icon-font-path: '../fonts/';
   align-items: center;
   padding: 15px;
   img {
-    transition: transform 400ms;
+    transition: transform 800ms;
   }
   &.slick-current.slick-active {
     position: relative;
@@ -469,7 +469,7 @@ body {
 }
 
 .text-shadow-white {
-  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 35px white, 0 0 40px white, 0 0 50px white, 0 0 75px white;
+  //text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white, 0 0 20px white, 0 0 35px white, 0 0 40px white, 0 0 50px white, 0 0 75px white;
 }
 
 //TODO: Переместить в отдельный файл

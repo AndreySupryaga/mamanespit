@@ -46,6 +46,8 @@ jQuery(document).ready(function () {
         centerMode: true,
         centerPadding: '60px',
         slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 5000,
         responsive: [
             {
                 breakpoint: 768,
