@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Корзина</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+<section class="block-container basket">
+    <!--<h1 class="basket-title">Оформление заказа</h1>-->
+
+    <h3 class="basket-title basket-info-title text-shadow-white">Информация для заказа</h3>
+
+    <form class="basket-form" id="basket-form">
+        <div class="input-box">
+            <label for="input-full-name">
+                Имя фамилия:
+            </label>
+            <input id="input-full-name" type="text" name="full-name">
+        </div>
+        <div class="input-box">
+            <label for="input-phone">
+                Телефон:
+            </label>
+            <input id="input-phone" type="text" name="phone">
+        </div>
+        <div class="input-box">
+            <label for="input-mail">
+                E-mail:
+            </label>
+            <input id="input-mail" type="text" name="email">
+        </div>
+        <!--<div class="input-box">-->
+            <!--<label for="input-city">-->
+                <!--Город:-->
+            <!--</label>-->
+            <!--<input id="input-city" type="text" name="city">-->
+        <!--</div>-->
+        <!--<div class="input-box">-->
+            <!--<label for="input-address">-->
+                <!--Адрес:-->
+            <!--</label>-->
+            <!--<input id="input-address" class="input-address" type="text" name="address">-->
+        <!--</div>-->
+
+        <h3 class="basket-title basket-info-title text-shadow-white">Способ доставки</h3>
+        <div class="checkboxes-container">
+            <div class="checkbox-box">
+                <label for="check-post-n">
+                    Новая почта:
+                </label>
+                <input id="check-post-n" type="radio" name="delivery-type" value="post-n" checked>
+            </div>
+            <div class="checkbox-box">
+                <label for="check-post-u">
+                    Укр.почта:
+                </label>
+                <input id="check-post-u" type="radio" name="delivery-type" value="post-u">
+            </div>
+        </div>
+        <div class="input-box post-n-number-input">
+            <label for="post-n-number">
+                № отделения:
+            </label>
+            <input id="post-n-number" type="text" name="post-n-number">
+        </div>
+        <div class="input-box post-u-address-input">
+            <label for="input-city">
+                Город:
+            </label>
+            <input id="input-city" type="text" name="city">
+        </div>
+        <div class="input-box post-u-address-input">
+            <label for="input-address">
+                Адрес:
+            </label>
+            <input id="input-address" class="input-address" type="text" name="address">
+        </div>
+
+        <!--<div id="np-map">-->
+            <!--<button type="button" id="npw-map-open-button" class="">БЛИЖАЙШЕЕ ОТДЕЛЕНИЕ</button>-->
+            <!--<script async="" defer=""-->
+                    <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPhm7Q29X5ldwjLtA7IMYHU_0xATiWK3A&amp;language=ru"></script>-->
+        <!--</div>-->
+        <h3 class="basket-title basket-info-title text-shadow-white">Способ оплаты</h3>
+        <div class="checkboxes-container">
+            <div class="checkbox-box">
+                <label for="heck-privat">
+                    Приват банк:
+                </label>
+                <input id="heck-privat" type="radio" name="payment-type" value="privat-bank">
+            </div>
+            <div class="checkbox-box">
+                <label for="check-webmoney">
+                    WebMoney:
+                </label>
+                <input id="check-webmoney" type="radio" name="payment-type" value="webmoney">
+            </div>
+        </div>
+
+        <div class="textarea-box">
+            <label for="textarea-input-id">
+                Коментарии:
+            </label>
+            <textarea id="textarea-input-id" cols="30" rows="6" name="comments"></textarea>
+        </div>
+        <input class="buy-button buy-button-basket" type="submit" value="Оформить заказ"/>
+    </form>
+    <form method="POST" accept-charset="utf-8" action="https://www.liqpay.ua/api/3/checkout">
+        <input type="hidden" name="data" value="eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXkiLCJwdWJsaWNfa2V5IjoiaTk4NjU3NDA4NzI3IiwiYW1vdW50IjoiMjAwIiwiY3VycmVuY3kiOiJVQUgiLCJkZXNjcmlwdGlvbiI6ItCa0L3QuNCz0LAgXCLQnNCw0LzQsCDQvdC1INGB0L/QuNGCXCIiLCJ0eXBlIjoiYnV5IiwibGFuZ3VhZ2UiOiJydSJ9" />
+        <input type="hidden" name="signature" value="OssjQrwo1HnlNVWtKwhs3MvSfM8=" />
+        <button style="border: none !important; display:inline-block !important;text-align: center !important;padding: 7px 20px !important;
+		color: #fff !important; font-size:16px !important; font-weight: 600 !important; font-family:OpenSans, sans-serif; cursor: pointer !important; border-radius: 2px !important;
+		background: rgb(122,183,43) !important;"onmouseover="this.style.opacity='0.5';" onmouseout="this.style.opacity='1';">
+            <img src="https://static.liqpay.ua/buttons/logo-small.png" name="btn_text"
+                 style="margin-right: 7px !important; vertical-align: middle !important;"/>
+            <span style="vertical-align:middle; !important">Оплатить 200 UAH</span>
+        </button>
+    </form>
+    <p class="info-box text-shadow-white">
+        Если у вас возникают сложности или вопросы при оформлении заказа, <br>
+        пожалуйста, звоните на +38 (063) 4035305 <br>
+        - мы примем заказ в телефонном режиме
+
+    </p>
+</section>
+<div id="lpay_form"></div>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function (b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function () {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js scripts/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/slick-carousel/slick/slick.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
