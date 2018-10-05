@@ -1,0 +1,40 @@
+.basket {
+  max-width: 860px;
+  background-image: url(../images/basket-bg.png);
+  background-size: cover;
+  flex-direction: column;
+  padding: 3% 7%;
+
+  .basket-title {
+    font-size: 34px;
+    text-align: center;
+    width: 100%;
+    &.basket-info-title {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  .basket-form {
+    display: flex;
+    flex-direction: column;
+    .buy-button-basket {
+      position: static;
+      font-size: 22px;
+      border: none;
+      width: 260px;
+      background: transparent url(../images/buy-button-basket-default.png) no-repeat 100%;
+      margin: 0 auto;
+      background-size: 100%;
+      height: 80px;
+      &:hover {
+        background: transparent url(../images/buy-button-basket-hovered.png) no-repeat 100%;
+        background-size: 100%;
+        text-decoration: none;
+      }
+    }
+  }
+}

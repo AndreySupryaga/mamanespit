@@ -1,0 +1,75 @@
+label {
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  padding-right: 30px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.input-box {
+  display: flex;
+  margin-bottom: 20px;
+  label {
+    width: 30%;
+    @media (max-width: 768px) {
+      width: 40%;
+    }
+  }
+  input {
+    height: 30px;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 40%;
+    font-size: 16px;
+    padding: 0 10px;
+    &.input-address {
+      width: 50%;
+    }
+    @media (max-width: 768px) {
+      height: 26px;
+      font-size: 14px;
+    }
+  }
+}
+
+.checkboxes-container {
+  display: flex;
+}
+
+.checkbox-box {
+  display: flex;
+  margin-bottom: 20px;
+  width: 50%;
+  label {
+    width: 60%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+}
+
+.textarea-box {
+  margin-bottom: 20px;
+  display: flex;
+  label {
+    width: 30%;
+    align-self: center;
+    @media (max-width: 768px) {
+      width: 40%;
+    }
+  }
+  textarea {
+    width: 50%;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    @media (max-width: 768px) {
+      height: 8em;
+    }
+  }
+}
