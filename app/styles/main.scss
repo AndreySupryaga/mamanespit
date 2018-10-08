@@ -111,13 +111,17 @@ body {
   cursor: pointer;
   &:hover {
     background-position: -5px -73px;
+    @media (max-width: 480px) {
+      background-position: -2px -40px;
+    }
   }
   @media (max-width: 480px) {
     width: 100px;
     height: 32px;
     right: 5px;
     top: 8px;
-    font-size: 14px;
+    font-size: 13px;
+    background-position: -2px -3px;
   }
 }
 
@@ -206,6 +210,7 @@ body {
   align-items: center;
   justify-content: space-between;
   background-image: url(../images/background-4.jpg);
+  padding: 20px 0;
   .img-container {
     padding: 5%;
     @media (max-width: 480px) {
@@ -230,7 +235,6 @@ body {
   }
   @media (max-width: 480px) {
     flex-direction: column;
-    padding-top: 20px;
   }
 }
 
