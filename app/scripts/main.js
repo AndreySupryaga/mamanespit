@@ -70,6 +70,26 @@ jQuery(document).ready(function () {
         ]
     });
 
+    // TODO: Переместить в отдельный файл
+
+    var modal = document.getElementById('myModal');
+    var btn = document.getElementsByClassName('buy-button')[0];
+    var span = document.getElementsByClassName('close')[0];
+
+    btn.onclick = function() {
+        modal.style.display = 'block';
+    };
+
+    span.onclick = function() {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
 });
 
 function objectifyForm(formArray) {//serialize data function
@@ -79,4 +99,3 @@ function objectifyForm(formArray) {//serialize data function
     }
     return returnArray;
 }
-

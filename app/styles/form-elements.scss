@@ -5,6 +5,10 @@ label {
   align-self: center;
   justify-content: flex-end;
   padding-right: 30px;
+  .label-optional {
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
   @media (max-width: 768px) {
     font-size: 18px;
   }

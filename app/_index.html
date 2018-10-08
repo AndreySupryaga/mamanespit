@@ -22,7 +22,8 @@
 
 <div class="main-container">
     <section class="block-1 block-container">
-        <a class="buy-button" href="basket.html">Купить</a>
+        <!--<a class="buy-button" href="basket.html">Купить</a>-->
+        <a class="buy-button">Купить</a>
         <!--<div class="buy-button-container">-->
         <!--</div>-->
         <h2 class="author">vishnevskaya</h2>
@@ -79,7 +80,7 @@
         </div>
 
         <div class="comment-tab text-shadow-white">
-           <div class="img-container">
+            <div class="img-container">
                 <img src="images/penguin.png" alt="Комментарий пингвина">
             </div>
             <p>Мне нравится постоянно узнавать
@@ -124,6 +125,34 @@
         <span class="text-shadow-white footer-label social-label">Больше узнать о нас</span>
     </section>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form name="modal-form">
+                <h3 class="modal-title">Оставьте ваши контактные данные и мы свяжемся с вами</h3>
+                <div class="input-box">
+                    <label for="input-name">
+                        Ваше имя
+                    </label>
+                    <input id="input-name" type="text" name="full-name" placeholder="Введите ваше имя...">
+                </div>
+                <div class="input-box">
+                    <label for="input-contacts">
+                        Ваши контакты &nbsp;<span class="label-optional">(телефон, email, ссылка на аккаунт в социальных сетях)</span>
+                    </label>
+                    <input id="input-contacts" type="text" name="full-name" placeholder="Введите ваши контакты...">
+                </div>
+                <div class="textarea-box">
+                    <label for="textarea-input-id">
+                        Коментарии:
+                    </label>
+                    <textarea id="textarea-input-id" cols="30" rows="6" name="comments"></textarea>
+                </div>
+                <input class="buy-button buy-button-basket" type="submit" value="Отправить"/>
+            </form>
+        </div>
+    </div>
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

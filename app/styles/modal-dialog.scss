@@ -1,4 +1,3 @@
-
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -16,10 +15,53 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  margin: 5% auto;
+  padding: 50px 30px 30px;
+  width: 80%;
+  max-width: 780px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
+  .input-box {
+    flex-direction: column;
+    input {
+      width: 100%;
+      height: 40px;
+      border: 2px solid #414a76;
+    }
+  }
+  .textarea-box {
+    flex-direction: column;
+    textarea {
+      width: 100%;
+      border: 2px solid #414a76;
+    }
+  }
+  .modal-title {
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+  }
+  label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .buy-button {
+    position: static;
+    font-size: 22px;
+    border: none;
+    width: 280px;
+    height: 70px;
+    background: transparent url(../images/button-bg-big.png) no-repeat;
+    background-size: 100%;
+    background-position: -5px -4px;
+    margin: 0 auto;
+    font-family: Marker Felt;
+    &:hover {
+      text-decoration: none;
+      background-position: 4px -89px;
+    }
+  }
 }
 
 /* The Close Button */
@@ -28,6 +70,7 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  transform: translateY(-25px);
 }
 
 .close:hover,
