@@ -16,7 +16,7 @@
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto;
-  padding: 50px 30px 30px;
+  padding: 50px 30px;
   width: 80%;
   max-width: 780px;
   border-radius: 10px;
@@ -60,6 +60,14 @@
     &:hover {
       text-decoration: none;
       background-position: 4px -89px;
+    }
+  }
+  .success-mail-send {
+    .info-box {
+      margin-top: 20px;
+    }
+    .modal-title {
+      padding-bottom: 10px;
     }
   }
 }

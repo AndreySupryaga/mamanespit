@@ -129,7 +129,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form name="modal-form">
+            <form name="modal-form" class="modal-form">
                 <h3 class="modal-title">Оставьте ваши контактные данные и мы свяжемся с вами</h3>
                 <div class="input-box">
                     <label for="input-name">
@@ -139,18 +139,28 @@
                 </div>
                 <div class="input-box">
                     <label for="input-contacts">
-                        Ваши контакты &nbsp;<span class="label-optional">(телефон, email, ссылка на аккаунт в социальных сетях)</span>
+                        Ваши контакты <span class="label-optional">(телефон, email, ссылка на аккаунт в социальных сетях)</span>
                     </label>
-                    <input id="input-contacts" type="text" name="full-name" placeholder="Введите ваши контакты...">
+                    <input id="input-contacts" type="text" name="contacts" placeholder="Введите ваши контакты...">
                 </div>
                 <div class="textarea-box">
                     <label for="textarea-input-id">
-                        Коментарии:
+                        Коментарий <span class="label-optional">(необязательно)</span>
                     </label>
-                    <textarea id="textarea-input-id" cols="30" rows="6" name="comments"></textarea>
+                    <textarea id="textarea-input-id" cols="30" rows="6" name="comments"
+                              placeholder="Оставьте ваш комментарий..."></textarea>
                 </div>
                 <input class="buy-button buy-button-basket" type="submit" value="Отправить"/>
             </form>
+            <div class="success-mail-send">
+                <h3 class="modal-title">Ваши данные успешно отправленны</h3>
+                <p class="info-box">В ближайшее время мы свяжемся с вами</p>
+                <p class="info-box">
+                    Если у вас возникают сложности или вопросы при оформлении заказа, <br>
+                    пожалуйста, звоните по телефону: +38 (063) 4035305, <br>
+                    мы примем заказ в телефонном режиме
+                </p>
+            </div>
         </div>
     </div>
 </div>

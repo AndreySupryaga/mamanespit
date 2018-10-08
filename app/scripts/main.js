@@ -1,7 +1,9 @@
 jQuery(document).ready(function () {
 
     //TODO: Переместить отправку формы в отдельный файл
-    $('#basket-form').submit(function (e) {
+    var $modalForm = $('.modal-form');
+    var $successMailSend = $('.success-mail-send').hide();
+    $modalForm.submit(function (e) {
         e.preventDefault();
         var $form = $(this);
         var formObject = objectifyForm($form.serializeArray());
@@ -15,10 +17,8 @@ jQuery(document).ready(function () {
             url: 'send.php', //путь до php фаила отправителя
             data: form_data,
             success: function (response) {
-                //код в этом блоке выполняется при успешной отправке сообщения
-
-                $('#lpay_form').empty().html( response.form );
-                $('#lpay_form form').submit();
+                $modalForm.hide();
+                $successMailSend.show();
             }
         });
 
@@ -76,15 +76,17 @@ jQuery(document).ready(function () {
     var btn = document.getElementsByClassName('buy-button')[0];
     var span = document.getElementsByClassName('close')[0];
 
-    btn.onclick = function() {
+    btn.onclick = function () {
         modal.style.display = 'block';
+        $modalForm.show();
+        $successMailSend.hide();
     };
 
-    span.onclick = function() {
+    span.onclick = function () {
         modal.style.display = 'none';
     };
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
         }
