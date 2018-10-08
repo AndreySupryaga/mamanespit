@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   position: relative;
   background-image: url(../images/background-1.jpg);
-  padding-bottom: 6%;
+  padding-bottom: 4%;
   @media (max-width: 480px) {
     background-position-y: 0;
     background-size: 115%;
@@ -133,6 +133,9 @@ body {
   left: 190px;
   cursor: pointer;
   opacity: 0;
+  @media (max-width:480px){
+    left: 140px;
+  }
 }
 
 .author {
@@ -254,6 +257,9 @@ body {
   background-image: url(../images/background-5.jpg);
   overflow: hidden;
   position: relative;
+  @media (max-width: 480px) {
+    background-position-x: -50px;
+  }
 }
 
 .social-links {
