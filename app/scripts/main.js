@@ -73,14 +73,14 @@ jQuery(document).ready(function () {
     // TODO: Переместить в отдельный файл
 
     var modal = document.getElementById('myModal');
-    var btn = document.getElementsByClassName('buy-button')[0];
+    var btn = $('.open-modal-button');
     var span = document.getElementsByClassName('close')[0];
 
-    btn.onclick = function () {
+    btn.click(function () {
         modal.style.display = 'block';
         $modalForm.show();
         $successMailSend.hide();
-    };
+    });
 
     span.onclick = function () {
         modal.style.display = 'none';

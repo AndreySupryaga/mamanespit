@@ -125,6 +125,16 @@ body {
   }
 }
 
+.buy-button-footer {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  bottom: 160px;
+  left: 190px;
+  cursor: pointer;
+  opacity: 0;
+}
+
 .author {
   font-size: 48px;
   color: white;
@@ -185,7 +195,7 @@ body {
 
 .block-2 {
   background-image: url(../images/background-2.jpg);
-  padding: 3% 0;
+  padding: 5% 0;
   @media (max-width: 480px) {
     display: flex;
     flex-direction: column;
@@ -243,6 +253,7 @@ body {
   flex-direction: column;
   background-image: url(../images/background-5.jpg);
   overflow: hidden;
+  position: relative;
 }
 
 .social-links {
