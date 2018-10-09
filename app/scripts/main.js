@@ -92,6 +92,20 @@ jQuery(document).ready(function () {
         }
     };
 
+    var block5 = $('.block-5'),
+        block1 = $('.block-1'),
+        block1Ratio = 1.78,
+        block5Ratio = 1.6764;
+
+    $(window).resize(function() {
+        block5.height(getElementHeightWithRatio(block5, block5Ratio));
+        block1.height(getElementHeightWithRatio(block1, block1Ratio))
+    }).resize();
+
+    function getElementHeightWithRatio(el, ratio) {
+        return el.width() / ratio;
+    }
+
 });
 
 function objectifyForm(formArray) {//serialize data function
