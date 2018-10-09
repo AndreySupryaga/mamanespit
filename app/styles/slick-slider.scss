@@ -22,8 +22,12 @@
   position: relative;
   overflow: hidden;
   margin: 0;
-  padding-top: 4% !important;
-  padding-bottom: 4% !important;
+  padding-top: 6% !important;
+  padding-bottom: 6% !important;
+  @media (max-width: 480px) {
+    padding-top: 8% !important;
+    padding-bottom: 8% !important;
+  }
 }
 
 .slick-arrow {
