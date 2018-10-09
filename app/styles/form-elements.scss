@@ -30,6 +30,7 @@ label {
     width: 40%;
     font-size: 16px;
     padding: 0 10px;
+    font-family: MarkerFelt, "Marker Felt";
     &.input-address {
       width: 50%;
     }
@@ -72,6 +73,7 @@ label {
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;
+    font-family: MarkerFelt, "Marker Felt";
     @media (max-width: 768px) {
       height: 8em;
     }

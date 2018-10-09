@@ -1,5 +1,4 @@
-$icon-font-path: '../fonts/';
-
+@import "fonts";
 @import "form-elements";
 @import "slick-slider";
 @import "animate";
@@ -25,19 +24,9 @@ $text-color: #413C82;
 
 body {
   padding: 0;
-  font-family: "Marker Felt";
+  font-family: MarkerFelt, "Marker Felt";
   color: $text-color;
 }
-
-//@font-face {
-//  font-family: "MarkerFelt";
-//  /*src: url("../fonts/RalewayRegular/RalewayRegular.eot");*/
-//  /*src: url("../fonts/RalewayRegular/RalewayRegular.eot?#iefix") format("embedded-opentype"),*/
-//  /*url("../fonts/RalewayRegular/RalewayRegular.woff") format("woff"),*/
-//  url("MarkerFelt.ttf") format("truetype");
-//  font-style: normal;
-//  font-weight: normal;
-//}
 
 .main-page {
   background-size: cover;
@@ -336,6 +325,7 @@ body {
   &.buy-label {
     top: 35%;
     left: 46%;
+    cursor: pointer;
   }
   &.social-label {
     top: 64%;
